@@ -1,0 +1,380 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+:root {
+    --font-principal: 'Inter', sans-serif;
+
+    --cor-especial: #8E2424;
+    --cor-texto: #667085;
+    --cor-titulo: #101828;
+    --cor-4: rgba(195, 25, 25, 0.03);
+    --cor-5: #98A2B3;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-principal);
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    align-items: center;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+}
+
+.sideMenu {
+    display: none;
+    visibility: hidden;
+}
+
+.menu.active {
+    right: 0;
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.5s;
+}
+
+.menu .links a{
+    margin-bottom: 2rem;
+}
+
+.sideMenu img {
+    position: relative;
+    z-index: 1;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+.links a {
+    color: var(--cor-texto);
+    text-decoration: none;
+    margin-right: 2rem;
+}
+
+button {
+    padding: 0.8rem 1rem;
+    cursor: pointer;
+    border: none;
+    border-radius: .5rem;
+    font-weight: 500;
+    background: none;
+    color: var(--cor-texto);
+    font-size: .9rem;
+
+}
+
+button:hover {
+    color: var(--cor-especial); 
+}
+
+button.signUp {
+    background-color: var(--cor-especial);
+    border: 1px solid var(--cor-especial);
+    color: #fff;
+}
+
+button.signUp:hover {
+    background: none;
+    color: var(--cor-especial);
+    border: 1px solid var(--cor-especial);
+
+}
+
+/*Cabeçalho - primeira parte */
+
+.cabecalho {
+    padding: 6rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.cabecalho span {
+    color: var(--cor-especial);
+}
+
+
+.cabecalho h1 {
+    text-align: center;
+    font-size: 2rem;
+    color: var(--cor-titulo);
+}
+
+.cabecalho p {
+    color: var(--cor-texto);
+    text-align: center;
+    max-width: 50%;
+    line-height: 1.5rem;
+}
+
+/* Metricas */
+
+.metricas {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 3rem;
+    padding: 0 8rem;
+}
+
+
+.metrica {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.metrica h1 {
+    color: var(--cor-especial);
+    font-size: 3rem;
+}
+
+.metrica span {
+    color: var(--cor-texto);
+    line-height: 140%;
+    font-size: 90%;
+}
+
+.metrica .metric-title {
+    font-weight: 500;
+    color: var(--cor-titulo);
+}
+
+/* Seção de Talentos */
+
+.talentos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 1rem;
+    padding-top: 8rem;
+    gap: 1rem;
+}
+
+.talentos h2 {
+    text-align: center;
+    color: var(--cor-titulo);
+}
+
+.talentos span {
+    color: var(--cor-especial);
+    background-color: rgba(142, 36, 36, 0.05);
+    padding: .5rem 1rem;
+    border-radius: 1rem;
+}
+
+.talentos p {
+    text-align: center;
+    color: var(--cor-texto);
+}
+
+.talentos img {
+    margin-top: 2rem;
+    width: 100%;
+    border-radius: 1rem;
+}
+
+/* Vagas Abertas */
+
+.vagas-abertas {
+    padding-top: 4rem;
+}
+
+.vagas-abertas span.area-principal {
+    display: block;
+    max-width: 50%;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    color: var(--cor-titulo);
+    font-weight: bold;
+}
+
+.vaga {
+    border: 1px solid #EAECF0;
+    border-radius: .5rem;
+    padding: 1rem;
+    max-width: 50%;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+    color: var(--cor-titulo);
+}
+
+.vaga span.titulo-vaga {
+    font-weight: 500;
+    margin-bottom: 16px;
+    cursor: pointer;
+}
+
+.vaga .informacoes {
+    margin-top: 1rem;
+    font-size: 90%;
+    color: var(--cor-texto);
+    display: flex;
+    gap: 2rem;
+}
+
+/* Seção de Depoimentos */
+
+.depoimentos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 80%;
+    margin: 8rem auto;
+    background-color: rgba(195, 25, 25, 0.05);
+    padding: 3rem 2rem;
+    border-radius: .8rem;
+}
+
+.depoimentos span {
+    color: var(--cor-especial);
+    font-weight: 500;
+    text-align: center;
+}
+
+.depoimentos img {
+    width: 48px;
+}
+
+.depoimentos h2 {
+    color: var(--cor-titulo);
+    font-weight: 500;
+    text-align: center;
+    max-width: 70%;
+    margin: 2rem 0;
+}
+
+.depoimentos span.nome {
+    color: var(--cor-titulo);
+    margin: .5rem 0;
+    font-weight: 400;
+}
+
+.depoimentos span.cargo {
+    color: var(--cor-texto);
+    font-weight: 400;
+}
+
+/* Footer */
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #F9FAFB;
+    padding: 6rem 1rem;
+    gap: 1.5rem;
+    text-align: center;
+}
+
+footer h2 {
+    color: var(--cor-titulo);
+}
+
+footer span {
+    color: var(--cor-texto);
+}
+
+footer form {
+    display: flex;
+    justify-content: space-between;
+}
+
+footer input {
+    outline: none;
+    border: 1px solid #D0D5DD;
+    border-radius: .5rem;
+    padding-left: 1rem;
+    width: 12rem;
+    margin-right: 1rem;
+}
+
+@media screen and (max-width: 920px){
+    .metricas {
+        padding: 0 4rem;
+    }
+}
+
+@media screen and (max-width: 850px){
+    .metricas{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .metrica {
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 2rem;
+    }
+
+    .metrica span{
+        max-width: 280px;
+        text-align: center;
+    }
+
+    .cabecalho p {
+        max-width: 70%;
+    }
+
+    .vaga {
+        max-width: 70%;
+    }
+
+    .vagas-abertas span.area-principal {
+        max-width: 70%;
+    }
+
+    .depoimentos h2 {
+        max-width: 100%;
+        font-size: 120%;
+    }
+
+    /* Ajuste de Menu*/
+
+    .sideMenu {
+        display: initial;
+        visibility: visible;
+    }
+
+    .links {
+        margin: 2rem 0;
+    }
+
+    .links a {
+        margin-right: 0;
+    }
+
+    .menu {
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        right: -1000px;
+        height: 100vh;
+        background: #F9FAFB;
+        width: 15rem;
+        padding: 2rem;
+        transition: all 2s;
+    }
+
+    .menu .links, .menu .buttons {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+}
